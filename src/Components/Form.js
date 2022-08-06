@@ -49,14 +49,14 @@ export default function Form(props) {
         props.showAlert("Text Area is reset successfuly");
       }}>Reset</button>
  {/* Text Length code */}
-<p><b>Length of String: <p className='colorChange'>{text.length}</p></b></p>
+<p><b>Number of characters: <span className='colorChange'>{text.length}</span></b></p>
 
 {/* Code to count the number of words written */}
 {/* filter takes a function which return true or false depend on the condition on the basis of which fuction over which .filter write work or not  */}
-<p>Word Count: {text.split(/\s+/).filter((element)=>{return element.length!==0}).length}</p>
+<p><b>Word Count: </b><span className='colorChange'>{text.split(/\s+/).filter((element)=>{return element.length!==0}).length}</span></p>
 
 <h4>Preview</h4>
-<p>{text.length>0?text:"Preview will be shown here"}</p>
+<p className='colorChange'>{text.length>0?text:"Preview will be shown here"}</p>
 {/* <p>{text.length>0?{text}:"Preview will be shown here"}</p> ------------> for printing text value you not requried one more curly braces it is an error */}
 
 {/* // if you open curly braces means javascript is start now if you again open one more curly braces then it will behave like an object and work only for key value pair like in calse of style written  */}
